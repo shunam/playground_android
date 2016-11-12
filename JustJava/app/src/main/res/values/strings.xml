@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">JustJava</string>
+    <string name="action_settings">Settings</string>
+    <string name="main_name">Hendrik</string>
+    <string name="main_address">Gg. Saleh III no 240</string>
+    <string name="main_sex">Pria</string>
+    <string name="main_button_ok">OK</string>
+    <string name="main_button_cancel">Cancel</string>
+
+    <!-- LOGIN FORM -->
+    <string name="login_button">Login</string>
+
+    <!--ORDER FORM-->
+    <string name="order_minus">-</string>
+    <string name="order_plus">+</string>
+    <string name="order_coffe_name">Coffee Name</string>
+    <string name="order_coffe_price">Coffee Price</string>
+    <string name="order_coffe_total">Coffe Total</string>
+    <string name="order_button">Order</string>
+</resources>
