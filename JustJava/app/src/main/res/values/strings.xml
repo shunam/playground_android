@@ -15,6 +15,6 @@
     <string name="order_plus">+</string>
     <string name="order_coffe_name">Coffee Name</string>
     <string name="order_coffe_price">Coffee Price</string>
-    <string name="order_coffe_total">Coffe Total</string>
+    <string name="order_coffe_total">Coffee Total</string>
     <string name="order_button">Order</string>
 </resources>

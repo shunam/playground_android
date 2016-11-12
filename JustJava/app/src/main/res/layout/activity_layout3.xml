@@ -10,25 +10,25 @@
         android:layout_height="wrap_content">
 
         <Button
-            android:text="Button"
+            android:text="@string/order_minus"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/button3"
+            android:id="@+id/order_button_minus"
             android:layout_weight="1" />
 
         <TextView
-            android:text="TextView"
+            android:text="0"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/textView"
-            android:layout_weight="1"
-            android:textAlignment="center" />
+            android:id="@+id/order_coffee_count"
+            android:textAlignment="center"
+            android:textSize="36sp" />
 
         <Button
-            android:text="Button"
+            android:text="@string/order_plus"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/button2"
+            android:id="@+id/order_button_plus"
             android:layout_weight="1" />
     </LinearLayout>
 
@@ -57,13 +57,14 @@
             android:textAlignment="center" />
 
         <TextView
-            android:text="@string/order_coffe_total"
+            android:text="5000"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/textView9"
+            android:id="@+id/order_coffee_price"
             android:layout_weight="0.21"
             android:textSize="36sp"
-            android:textAlignment="center" />
+            android:textAlignment="center"
+            android:fontFamily="sans-serif-smallcaps" />
 
         <Button
             android:text="@string/order_button"
@@ -72,6 +73,25 @@
             android:id="@+id/button4"
             android:textAlignment="center"
             android:textSize="36sp" />
+
+        <TextView
+            android:text="@string/order_coffe_total"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView9"
+            android:layout_weight="0.21"
+            android:textSize="36sp"
+            android:textAlignment="center" />
+
+        <TextView
+            android:text="0"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/order_coffee_total_order"
+            android:layout_weight="0.21"
+            android:textAlignment="center"
+            android:textSize="36sp"
+            android:fontFamily="sans-serif-smallcaps" />
     </LinearLayout>
 
 </LinearLayout>
