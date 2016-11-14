@@ -23,7 +23,7 @@ public class RegisterActivity extends AppCompatActivity {
         mButtonRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent mIntent = new Intent(RegisterActivity.this, RegisterActivity.class);
+                Intent mIntent = new Intent(RegisterActivity.this, OrderActivity.class);
                 mIntent.putExtra("name", mEditTextName.getText().toString());
                 mIntent.putExtra("email", mEditTextEmail.getText().toString());
                 startActivity(mIntent);
