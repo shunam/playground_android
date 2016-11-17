@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.SimpleAdapter;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -21,6 +22,8 @@ public class CustomAdapter extends SimpleAdapter {
     Context context;
     ArrayList<HashMap<String, String>> arrayList;
     Button mButtonMinus;
+    Button mButtonPlus;
+    TextView mTextViewQuantity;
 
     public CustomAdapter(Context context, ArrayList<HashMap<String, String>> data, int resource, String[] from, int[] to) {
         super(context, data, resource, from, to);
@@ -31,8 +34,8 @@ public class CustomAdapter extends SimpleAdapter {
 
     @Override
     public View getView(final int position, View convertView, ViewGroup parent) {
-        View view = super.getView(position, convertView, parent);
-        ImageView imageView = (ImageView) view.findViewById(R.id.imageViewProduct);
+        final View mView = super.getView(position, convertView, parent);
+        ImageView imageView = (ImageView) mView.findViewById(R.id.imageViewProduct);
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -40,14 +43,38 @@ public class CustomAdapter extends SimpleAdapter {
             }
         });
 
+        mButtonMinus = (Button) mView.findViewById(R.id.buttonMinus);
+        mButtonPlus = (Button) mView.findViewById(R.id.buttonPlus);
 
-        mButtonMinus = (Button) view.findViewById(R.id.buttonMinus);
         mButtonMinus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                calculateCost("minus", mView);
             }
         });
 
-        return view;
+        mButtonPlus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                calculateCost("plus", mView);
+            }
+        });
+        return mView;
+    }
+
+    public void calculateCost(String cal, View view){
+        mTextViewQuantity = (TextView) view.findViewById(R.id.textViewQuantity);
+        int mCurrentCount = Integer.parseInt(mTextViewQuantity.getText().toString());
+        if(cal == "plus"){
+            int tempCount = mCurrentCount + 1;
+            mTextViewQuantity.setText(Integer.toString(tempCount));
+        } else {
+            int tempCount = mCurrentCount - 1;
+            if (tempCount < 0) {
+                mTextViewQuantity.setText(Integer.toString(0));
+            } else {
+                mTextViewQuantity.setText(Integer.toString(tempCount));
+            }
+        }
     }
 }

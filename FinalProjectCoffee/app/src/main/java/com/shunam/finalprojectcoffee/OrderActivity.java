@@ -45,15 +45,5 @@ public class OrderActivity extends AppCompatActivity {
 
 
         mListViewProduct.setAdapter(simpleAdapter);//sets the adapter for listView
-
-        //Call alert dialog to add quantity
-        mListViewProduct.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Toast.makeText(getApplicationContext(), "Hahaha berhasil " + productPrices[i], Toast.LENGTH_LONG).show();
-
-//                Toast.makeText(getApplicationContext(), fruitsNames[i], Toast.LENGTH_LONG).show();//show the selected image in toast according to position
-            }
-        });
     }
 }
