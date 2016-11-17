@@ -6,8 +6,20 @@
     android:layout_height="match_parent"
     tools:context="com.shunam.finalprojectcoffee.OrderActivity">
 
-    <ListView
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/listViewProduct"/>
+        android:layout_height="match_parent">
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="460dp"
+            android:id="@+id/listViewProduct"/>
+
+        <Button
+            android:text="Order"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/buttonOrder" />
+    </LinearLayout>
 </RelativeLayout>

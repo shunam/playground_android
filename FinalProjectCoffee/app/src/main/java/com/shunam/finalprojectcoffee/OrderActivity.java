@@ -15,7 +15,7 @@ public class OrderActivity extends AppCompatActivity {
     private ListView mListViewProduct;
 
     // String of array products
-    String[] productNames = {"Coffee", "Cookie", "Ice Coffee", "Ice Tea", "Sausage"};
+    String[] productNames = {"Coffee (57k)", "Cookie (20k)", "Ice Coffee (50k)", "Ice Tea (30k)", "Sausage (70k)"};
 
     // Price of products
     int[] productPrices = {57000, 20000, 50000, 30000, 70000};
